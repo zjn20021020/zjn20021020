@@ -71,11 +71,11 @@ _2024.10 - 2025.1_
 ### 竞赛 · Competitions
 
 - 🥈 **全国大学生光电设计竞赛 二等奖** | _National Optoelectronic Design Contest — 2nd Prize_ (2023)  
-  项目：迷宫寻宝小车（基于视觉识别与自主导航）
+  项目：迷宫寻宝小车（基于视觉识别与自主导航）[[📹 演示视频]](https://www.bilibili.com/video/BV1cN411z7co)
 - 🥇 **全国大学生电子设计大赛 省级一等奖** | _National Undergraduate Electronics Design Contest — Provincial 1st Prize_ (2023)  
   F 题：基于声传播的智能定位系统（负责定位算法实现与神经网络部署）
 - 🏆 **湖北省电子设计竞赛 特等奖** | _Hubei Electronics Design Contest — Grand Prize_ (2022)  
-  C 题：小车跟随行驶系统（双车协同、自适应跟随与超车）
+  C 题：小车跟随行驶系统（双车协同、自适应跟随与超车）[[📹 演示视频]](https://www.bilibili.com/video/BV1JB4y1t7NL)
 
 <!-- 个人信息占位区 INFO-PLACEHOLDER — 如需补充教育背景、发表论文、获奖等，可在此展开 -->
 
@@ -94,7 +94,7 @@ ASL / PCASL 脑灌注成像方向的多个研究项目，涵盖**序列设计、
 | :-- | :-- | :-- |
 | [**bbcar**](https://github.com/zjn20021020/bbcar) | 基于 STM32G474 的麦克纳姆轮全向机器人小车：IMU 姿态解算 + 编码器轮速反馈 + PID 闭环 + 红外循迹<br/>_Mecanum-wheel omnidirectional robot car on STM32G474_ | `C` `STM32` `Keil` |
 | [**ScholarLife-Agent**](https://github.com/zjn20021020/ScholarLife-Agent) | 面向学生与科研工作者的多场景 AI 助手，基于 Dify：论文检索/润色/降AI味/审稿 + 生活类工具<br/>_Multi-scenario AI assistant for students & researchers, built on Dify_ | `Dify` `LLM` |
-| **FPGA 体感贪吃蛇** | 人体姿态控制的贪吃蛇小游戏（通过视觉），部署在 FPGA 上<br/>_Gesture-controlled Snake game deployed on FPGA with computer vision_ | `FPGA` `OpenCV` |
+| **FPGA 体感贪吃蛇** [[📹]](https://www.bilibili.com/video/BV1nP411K7T8) | 人体姿态控制的贪吃蛇小游戏（通过视觉），部署在 FPGA 上<br/>_Gesture-controlled Snake game deployed on FPGA with computer vision_ | `FPGA` `OpenCV` |
 
 ### 🤝 协作项目 · Collaborations
 
