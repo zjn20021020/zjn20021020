@@ -55,74 +55,61 @@ _2024.10 - 2025.1_
 ### 🤖 AI Agent 与应用开发
 
 #### [solo-leveling](https://github.com/zjn20021020/solo-leveling)
-**我独自升级 - 自我进化的 OpenClaw 插件**
+**我独自升级 - 从对话摩擦中自我进化的 OpenClaw 插件**
 
-基于 **Reflection** 机制的自适应学习系统，通过 **Human Feedback Loop** 实现持续优化：
+基于 **Human-in-the-Loop** 的自适应学习系统，通过捕获用户纠正与负面情绪实现持续知识蒸馏：
 
-- 🔍 **Friction Detection** - 实时监测用户纠正与情感信号（Sentiment Analysis）
-- 🧠 **Knowledge Distillation** - 将交互摩擦蒸馏为可复用 Skill（Meta-Learning）
-- 📚 **Skill Registry** - 索引派架构，O(1) 技能检索与版本管理
-- ⚡ **Atomic Write** - Staging + Rename 原子操作，零风险技能更新
-- 🔄 **Retrospective Loop** - 会话级回顾机制，增量式知识积累
+- 🔍 **Friction Detection** - 双维度扫描：纠错次数 + 情感强度（calm/annoyed/agitated/hostile）
+- 🧠 **Knowledge Distillation** - 三模式决策（skip/new/revise），将对话摩擦转化为可复用 Skill
+- 📚 **Index-Based Registry** - index.json 单一事实源 + O(1) 检索，无需扫描目录
+- ⚡ **Atomic Write Protocol** - Staging → Validation → Rename，写失败零污染
+- 🔄 **Retrospective Mechanism** - 会话首轮注入 recap，展示新学 Skill 摘要
 
-**核心技术**：
-- **Two-Phase Pipeline**: Friction Scan → Lesson Distillation
-- **Budget-Greedy Context**: 预算约束下的贪心上下文采样
-- **Bracket-Depth JSON Parsing**: 鲁棒的结构化输出解析
+**核心架构**：Two-Phase Pipeline (Friction Scan → Lesson Distillation) · Budget-Greedy Transcript · Bracket-Depth JSON Carving
 
-**技术栈**：`TypeScript` `OpenClaw Plugin SDK` `Zod Schema Validation` `Meta-Learning` `RLHF`
+**技术栈**：`TypeScript` `OpenClaw Plugin SDK` `Zod` `Prompt Engineering` `Meta-Learning`
 
 ---
 
 #### [PaperAgent](https://github.com/zjn20021020/PaperAgent)
-**基于 RAG 的学术论文智能助手**
+**端到端学术论文自动生成 - 基于 LangGraph 的多智能体协作框架**
 
-采用 **Retrieval-Augmented Generation** 架构的学术研究辅助系统：
+从零完成完整科研流程：论文检索 → 灵感提取 → 方案设计 → 实验设计 → 逐章撰写 → 多轮审稿优化
 
-- 📄 **Document Understanding** - 多模态论文解析（PDF/LaTeX）
-- 🔎 **Semantic Search** - Vector Database 驱动的语义检索
-- 💡 **Citation Network** - 引用关系图谱构建与分析
-- ✍️ **Academic Writing** - 基于 Prompt Engineering 的写作辅助
-- 📊 **Literature Review** - 自动化文献综述生成
+- 📄 **Multi-Agent Workflow** - LangGraph 状态机：14 个核心节点 + 条件分支 + 双循环机制
+- 🔎 **Section Pipeline** - 架构设计 → 派发章节 → 写作 → 校验 → 重写（最多 3 次）→ 保存
+- 💡 **Review Iteration Loop** - 改稿 → 润色 → 去 AI 味 → 审稿 → 返回改稿（最多 3 轮）
+- ✍️ **Conditional Branching** - 章节校验分支 + 审稿迭代分支
+- 📊 **Conference Templates** - NeurIPS / ICML / ICLR / ACL / CVPR / AAAI
 
-**核心架构**：
-- **Embedding Model**: 学术领域微调的向量化模型
-- **Chunking Strategy**: 段落级语义分割与上下文保留
-- **Reranking**: 多阶段检索优化（Coarse-to-Fine）
+**核心技术**：State Machine Architecture · Quality Control System (章节级 + 论文级) · arXiv Integration
 
-**技术栈**：`Python` `LangChain` `ChromaDB/FAISS` `RAG` `Transformer` `Few-Shot Learning`
+**技术栈**：`Python` `LangGraph` `LangChain` `OpenAI API` `Anthropic API` `LaTeX`
 
 ---
 
-#### [Pi_based-knowledge-agent](https://github.com/zjn20021020/Pi_based-knowledge-agent)
-**树莓派边缘部署的知识型 Agent**
+#### [paper-agent](https://github.com/zjn20021020/paper-agent)
+**Paper Knowledge Agent - 基于 Pi Agent 框架的对话式论文库管家**
 
-面向 **Edge Computing** 的轻量级智能 Agent，实现 **On-Device Inference**：
+构建在 Pi Agent 之上的终端 AI 助手，实现多主题论文库的自动化管理与段落级语义检索
 
-- 🖥️ **Model Quantization** - INT8/FP16 量化部署
-- 🚀 **Inference Optimization** - TensorRT/ONNX Runtime 加速
-- 🧠 **Knowledge Graph** - 本地知识图谱与推理引擎
-- 💬 **Offline NLU** - 离线自然语言理解模块
-- 🔌 **IoT Integration** - 物联网设备协议适配
+- 🏗️ **Pi Framework Integration** - 复用 InteractiveMode(TUI) + SessionManager + ModelRegistry + Tool Dispatcher
+- 🗂️ **Multi-Collection Management** - 智能路由（下载归属判断 / 检索库选择）
+- 📥 **arXiv Crawler** - 批量下载 PDF + 限流策略（每篇 3s 间隔）
+- 📑 **Section-Level Chunking** - 识别 20+ 学术章节关键词 + ~300 token 切分 + 章节定位
+- 💾 **Zero External Services** - SQLite(sql.js) + JSON 向量库 + 本地 PDF
+- 🔄 **Embedding Fallback** - OpenAI text-embedding-3-small (1536维) → TF-IDF 自动降级
 
-**系统特性**：
-- **Low-Latency**: <100ms 响应时延
-- **Privacy-First**: 本地推理，数据不出设备
-- **Resource-Aware**: 内存占用 <500MB
+**架构特点**：15 个 Custom Tools Injection · Hybrid Embedding (OpenAI + TF-IDF 双后端)
 
-**技术栈**：`Raspberry Pi` `TensorFlow Lite` `ONNX` `Knowledge Graph` `Edge AI` `Model Compression`
+**技术栈**：`TypeScript` `Node.js` `Pi Agent Framework` `sql.js` `pdf-parse` `OpenAI Embedding` `TF-IDF`
 
 ---
 
 #### [ScholarLife-Agent](https://github.com/zjn20021020/ScholarLife-Agent)
 **面向学生与科研工作者的多场景 AI 助手**
 
-基于 **Workflow Orchestration** 构建的多 Agent 协同系统：
-
-- 📚 **Tool Use** - 论文检索与文献管理（Function Calling）
-- ✍️ **Style Transfer** - 学术写作润色与 AI 检测规避
-- 📝 **Peer Review Simulation** - 模拟审稿人视角的论文评审
-- 🔧 **Task Automation** - 科研工作流自动化编排
+基于 Workflow Orchestration 的多 Agent 协同系统：论文检索 · 写作润色 · 审稿模拟 · 工作流自动化
 
 **技术栈**：`Dify` `LLM` `Multi-Agent System` `Workflow Orchestration` `Tool Use`
 
@@ -133,21 +120,16 @@ _2024.10 - 2025.1_
 #### [bbcar](https://github.com/zjn20021020/bbcar)
 **基于 STM32G474 的麦克纳姆轮全向机器人小车**
 
-- IMU 姿态解算 + 编码器轮速反馈
-- PID 闭环控制系统
-- 红外循迹功能
-- 多传感器融合控制
+IMU 姿态解算 + 编码器轮速反馈 · PID 闭环控制 · 红外循迹 · 多传感器融合
 
 **技术栈**：`STM32` `C` `Keil` `PID Control` `Sensor Fusion`
 
 ---
 
-#### FPGA 体感贪吃蛇 [[📹 演示视频]](https://www.bilibili.com/video/BV1nP411K7T8)
+#### FPGA 体感贪吃蛇 [[📹 演示]](https://www.bilibili.com/video/BV1nP411K7T8)
 **人体姿态控制的贪吃蛇小游戏**
 
-- 通过计算机视觉识别人体姿态
-- 部署在 FPGA 上实现实时交互
-- 姿态识别与游戏逻辑结合
+计算机视觉识别人体姿态 · FPGA 实时交互 · 姿态识别与游戏逻辑结合
 
 **技术栈**：`FPGA` `OpenCV` `Computer Vision`
 
@@ -158,10 +140,7 @@ _2024.10 - 2025.1_
 #### [henryzhuhr/deep-lane-detection](https://github.com/henryzhuhr/deep-lane-detection)
 **基于深度学习的车道线检测**
 
-- 将视频中的车道线检测出来
-- 使用深度学习方法实现车道线检测
-- 训练好的模型使用 TensorRT 部署在 Jetson Nano 上，达到较高推理效率
-- 同时根据识别结果完成小车循迹，在不触碰车道线的情况下走完较复杂路段
+深度学习车道线检测 · TensorRT 部署 Jetson Nano · 小车循迹
 
 **技术栈**：`PyTorch` `TensorRT` `Jetson Nano` `Computer Vision`
 
@@ -176,8 +155,8 @@ _2024.10 - 2025.1_
 _ISMRM-ISMRT Annual Meeting & Exhibition_, Cape Town, South Africa, May 2026  
 Program Number: 661-01-011 | [查看摘要](http://echo.ismrm.org/abstracts/view/773ce267-4fd2-4b8b-b367-eec6be612400)
 
-> 💡 独立完成了一套包含 **GE / Siemens / Philips / 联影**的多厂商通用磁共振成像实现方案  
-> 📄 该工作已拓展为期刊论文并投递至顶刊 **_Magnetic Resonance in Medicine_**，目前 **under review**
+> 💡 独立完成 **GE / Siemens / Philips / 联影** 多厂商通用磁共振成像方案  
+> 📄 已拓展为期刊论文投递 **_Magnetic Resonance in Medicine_**，**under review**
 
 ### 专利
 
@@ -195,14 +174,9 @@ Program Number: 661-01-011 | [查看摘要](http://echo.ismrm.org/abstracts/view
 
 ### 竞赛
 
-- 🥈 **全国大学生光电设计竞赛 二等奖** (2023)  
-  项目：迷宫寻宝小车（基于视觉识别与自主导航）[[📹 演示视频]](https://www.bilibili.com/video/BV1cN411z7co)
-  
-- 🥇 **全国大学生电子设计大赛 省级一等奖** (2023)  
-  F 题：基于声传播的智能定位系统（负责定位算法实现与神经网络部署）
-  
-- 🏆 **湖北省电子设计竞赛 特等奖** (2022)  
-  C 题：小车跟随行驶系统（双车协同、自适应跟随与超车）[[📹 演示视频]](https://www.bilibili.com/video/BV1JB4y1t7NL)
+- 🥈 **全国大学生光电设计竞赛 二等奖** (2023) | 迷宫寻宝小车 [[📹]](https://www.bilibili.com/video/BV1cN411z7co)
+- 🥇 **全国大学生电子设计大赛 省级一等奖** (2023) | F 题：基于声传播的智能定位系统
+- 🏆 **湖北省电子设计竞赛 特等奖** (2022) | C 题：小车跟随行驶系统 [[📹]](https://www.bilibili.com/video/BV1JB4y1t7NL)
 
 ---
 
@@ -218,7 +192,7 @@ Program Number: 661-01-011 | [查看摘要](http://echo.ismrm.org/abstracts/view
 ![Linux](https://img.shields.io/badge/Linux-FCC624?style=flat&logo=linux&logoColor=black)
 ![Git](https://img.shields.io/badge/Git-F05032?style=flat&logo=git&logoColor=white)
 
-**关键词**：`AI Agent` · `RAG` · `Meta-Learning` · `Edge AI` · `Embedded Systems` · `LLM Applications` · `Knowledge Graph` · `RLHF` · `Multi-Agent System`
+**关键词**：`AI Agent` · `LangGraph` · `Multi-Agent System` · `Knowledge Distillation` · `Human-in-the-Loop` · `State Machine` · `Prompt Engineering` · `Tool Use` · `Workflow Orchestration` · `Semantic Search` · `Embedding` · `TF-IDF`
 
 ---
 
