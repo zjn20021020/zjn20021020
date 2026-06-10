@@ -54,16 +54,77 @@ _2024.10 - 2025.1_
 
 ### 🤖 AI Agent 与应用开发
 
+#### [solo-leveling](https://github.com/zjn20021020/solo-leveling)
+**我独自升级 - 自我进化的 OpenClaw 插件**
+
+基于 **Reflection** 机制的自适应学习系统，通过 **Human Feedback Loop** 实现持续优化：
+
+- 🔍 **Friction Detection** - 实时监测用户纠正与情感信号（Sentiment Analysis）
+- 🧠 **Knowledge Distillation** - 将交互摩擦蒸馏为可复用 Skill（Meta-Learning）
+- 📚 **Skill Registry** - 索引派架构，O(1) 技能检索与版本管理
+- ⚡ **Atomic Write** - Staging + Rename 原子操作，零风险技能更新
+- 🔄 **Retrospective Loop** - 会话级回顾机制，增量式知识积累
+
+**核心技术**：
+- **Two-Phase Pipeline**: Friction Scan → Lesson Distillation
+- **Budget-Greedy Context**: 预算约束下的贪心上下文采样
+- **Bracket-Depth JSON Parsing**: 鲁棒的结构化输出解析
+
+**技术栈**：`TypeScript` `OpenClaw Plugin SDK` `Zod Schema Validation` `Meta-Learning` `RLHF`
+
+---
+
+#### [PaperAgent](https://github.com/zjn20021020/PaperAgent)
+**基于 RAG 的学术论文智能助手**
+
+采用 **Retrieval-Augmented Generation** 架构的学术研究辅助系统：
+
+- 📄 **Document Understanding** - 多模态论文解析（PDF/LaTeX）
+- 🔎 **Semantic Search** - Vector Database 驱动的语义检索
+- 💡 **Citation Network** - 引用关系图谱构建与分析
+- ✍️ **Academic Writing** - 基于 Prompt Engineering 的写作辅助
+- 📊 **Literature Review** - 自动化文献综述生成
+
+**核心架构**：
+- **Embedding Model**: 学术领域微调的向量化模型
+- **Chunking Strategy**: 段落级语义分割与上下文保留
+- **Reranking**: 多阶段检索优化（Coarse-to-Fine）
+
+**技术栈**：`Python` `LangChain` `ChromaDB/FAISS` `RAG` `Transformer` `Few-Shot Learning`
+
+---
+
+#### [Pi_based-knowledge-agent](https://github.com/zjn20021020/Pi_based-knowledge-agent)
+**树莓派边缘部署的知识型 Agent**
+
+面向 **Edge Computing** 的轻量级智能 Agent，实现 **On-Device Inference**：
+
+- 🖥️ **Model Quantization** - INT8/FP16 量化部署
+- 🚀 **Inference Optimization** - TensorRT/ONNX Runtime 加速
+- 🧠 **Knowledge Graph** - 本地知识图谱与推理引擎
+- 💬 **Offline NLU** - 离线自然语言理解模块
+- 🔌 **IoT Integration** - 物联网设备协议适配
+
+**系统特性**：
+- **Low-Latency**: <100ms 响应时延
+- **Privacy-First**: 本地推理，数据不出设备
+- **Resource-Aware**: 内存占用 <500MB
+
+**技术栈**：`Raspberry Pi` `TensorFlow Lite` `ONNX` `Knowledge Graph` `Edge AI` `Model Compression`
+
+---
+
 #### [ScholarLife-Agent](https://github.com/zjn20021020/ScholarLife-Agent)
 **面向学生与科研工作者的多场景 AI 助手**
 
-基于 Dify 构建的智能助手系统，集成多个实用功能：
-- 📚 论文检索与文献管理
-- ✍️ 学术写作润色与降 AI 味
-- 📝 论文审稿辅助
-- 🔧 科研日常工具集
+基于 **Workflow Orchestration** 构建的多 Agent 协同系统：
 
-**技术栈**：`Dify` `LLM` `AI Agent` `Workflow Orchestration`
+- 📚 **Tool Use** - 论文检索与文献管理（Function Calling）
+- ✍️ **Style Transfer** - 学术写作润色与 AI 检测规避
+- 📝 **Peer Review Simulation** - 模拟审稿人视角的论文评审
+- 🔧 **Task Automation** - 科研工作流自动化编排
+
+**技术栈**：`Dify` `LLM` `Multi-Agent System` `Workflow Orchestration` `Tool Use`
 
 ---
 
@@ -157,7 +218,7 @@ Program Number: 661-01-011 | [查看摘要](http://echo.ismrm.org/abstracts/view
 ![Linux](https://img.shields.io/badge/Linux-FCC624?style=flat&logo=linux&logoColor=black)
 ![Git](https://img.shields.io/badge/Git-F05032?style=flat&logo=git&logoColor=white)
 
-**关键词**：`AI Agent` · `Embedded Systems` · `LLM Applications` · `STM32` · `FPGA` · `Computer Vision` · `MRI Sequence Development`
+**关键词**：`AI Agent` · `RAG` · `Meta-Learning` · `Edge AI` · `Embedded Systems` · `LLM Applications` · `Knowledge Graph` · `RLHF` · `Multi-Agent System`
 
 ---
 
