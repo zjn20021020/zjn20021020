@@ -18,11 +18,13 @@ University of Science and Technology of China · Master Student
 
 ## 👤 关于我
 
-我热爱 **Agent 开发**，包括 **AI Agent** 和**嵌入式智能系统**的设计与实现。
+我专注于 **Agent Harness 与 AI Agent 工程**，关注 Agent Loop、Tool Use、Skills、Memory、Context Engineering，以及真实任务中的可靠性与可观测性。
+
+目前在科大讯飞担任 AI 研发工程师实习生（Agent Harness 方向），参与桌面 Agent 产品、Agent 内核与端云协同能力的研发和版本交付。
 
 同时在读研期间从事磁共振序列开发工作，在医学影像领域积累了一定的研究经验。
 
-**兴趣方向**：AI Agent 开发 · 嵌入式智能系统 · LLM 应用 · 磁共振序列设计
+**兴趣方向**：Agent Harness · AI Agent · Tool Use · Context Engineering · Multi-Agent · LLM 系统工程
 
 ---
 
@@ -40,6 +42,16 @@ University of Science and Technology of China · Master Student
 ---
 
 ## 💼 实习经历
+
+**科大讯飞** | AI 研发工程师实习生（Agent Harness 方向）  
+_2026.06 - 至今_
+
+- 持续参与 **AstronStudio、Acode、AstronClaw** 的开发与版本交付，覆盖桌面 Agent Harness、Rust Agent 内核与端云协同链路
+- 参与 AstronStudio 多 Provider Harness 的会话生命周期、流式事件与能力建模；其渠道能力通过 Astron Connect 接入飞书、微信并映射到本地 Agent 会话
+- 负责 Acode Agent 生命周期日志埋点，覆盖 Turn、Tool、MCP、Skills、Subagent、Plugin、上下文压缩与 Token 用量
+- 开发 Agent 可观测大盘与 Elastic 自动查询能力，将真实任务中的失败链路反馈到模型与 Harness 联调、Bug 修复及回归测试
+
+---
 
 **OPPO 公司** | 语音算法开发工程师  
 _2024.10 - 2025.1_
@@ -88,7 +100,7 @@ _2024.10 - 2025.1_
 
 ---
 
-#### [paper-agent](https://github.com/zjn20021020/paper-agent)
+#### [Pi_based-knowledge-agent](https://github.com/zjn20021020/Pi_based-knowledge-agent)
 **Paper Knowledge Agent - 基于 Pi Agent 框架的对话式论文库管家**
 
 构建在 Pi Agent 之上的终端 AI 助手，实现多主题论文库的自动化管理与段落级语义检索
@@ -183,6 +195,9 @@ Program Number: 661-01-011 | [查看摘要](http://echo.ismrm.org/abstracts/view
 ## 🛠️ 技术栈
 
 ![Python](https://img.shields.io/badge/Python-3776AB?style=flat&logo=python&logoColor=white)
+![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=flat&logo=typescript&logoColor=white)
+![Rust](https://img.shields.io/badge/Rust-000000?style=flat&logo=rust&logoColor=white)
+![Go](https://img.shields.io/badge/Go-00ADD8?style=flat&logo=go&logoColor=white)
 ![C](https://img.shields.io/badge/C-00599C?style=flat&logo=c&logoColor=white)
 ![C++](https://img.shields.io/badge/C++-00599C?style=flat&logo=cplusplus&logoColor=white)
 ![MATLAB](https://img.shields.io/badge/MATLAB-0076A8?style=flat&logo=mathworks&logoColor=white)
@@ -192,14 +207,14 @@ Program Number: 661-01-011 | [查看摘要](http://echo.ismrm.org/abstracts/view
 ![Linux](https://img.shields.io/badge/Linux-FCC624?style=flat&logo=linux&logoColor=black)
 ![Git](https://img.shields.io/badge/Git-F05032?style=flat&logo=git&logoColor=white)
 
-**关键词**：`AI Agent` · `LangGraph` · `Multi-Agent System` · `Knowledge Distillation` · `Human-in-the-Loop` · `State Machine` · `Prompt Engineering` · `Tool Use` · `Workflow Orchestration` · `Semantic Search` · `Embedding` · `TF-IDF`
+**关键词**：`Agent Harness` · `Agent Loop` · `Tool Use` · `Skills` · `MCP` · `Memory` · `Subagent` · `Multi-Agent` · `Context Engineering` · `LangGraph` · `RAG` · `WebSocket` · `Observability`
 
 ---
 
 ## 📫 联系方式
 
 - 📧 邮箱：zhangjianing@mail.ustc.edu.cn
-- 💬 欢迎交流：AI Agent 开发、嵌入式系统、LLM 应用
+- 💬 欢迎交流：Agent Harness、AI Agent、LLM 系统工程
 
 ---
 

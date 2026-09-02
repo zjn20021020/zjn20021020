@@ -18,11 +18,13 @@
 
 ## 👤 About Me
 
-I am passionate about **Agent Development**, including **AI Agent** and **embedded intelligent systems** design and implementation.
+I focus on **Agent Harness and AI Agent engineering**, including agent loops, tool use, skills, memory, context engineering, reliability, and observability in real-world tasks.
+
+I am currently an AI R&D Engineer Intern at iFLYTEK, working on desktop agent products, agent runtimes, and cloud-device collaboration.
 
 During my graduate studies, I also work on MRI pulse sequence development and have accumulated research experience in medical imaging.
 
-**Interests**: AI Agent Development · Embedded Intelligent Systems · LLM Applications · MRI Sequence Design
+**Interests**: Agent Harness · AI Agent · Tool Use · Context Engineering · Multi-Agent · LLM Systems
 
 ---
 
@@ -41,6 +43,16 @@ Electronic Information Engineering | 2021 - 2025
 
 ## 💼 Work Experience
 
+**iFLYTEK** | AI R&D Engineer Intern, Agent Harness  
+_Jun 2026 - Present_
+
+- Contribute to the development and release delivery of **AstronStudio, Acode, and AstronClaw**, spanning a desktop agent harness, a Rust agent runtime, and cloud-device collaboration
+- Work on AstronStudio's multi-provider session lifecycle, streaming event model, and capabilities; its Astron Connect channel module bridges Feishu and Weixin with local agent sessions
+- Build Acode lifecycle telemetry across turns, tools, MCP, skills, subagents, plugins, context compaction, and token usage
+- Develop observability and automated Elastic trace lookup to feed real-task failures into model/harness debugging, bug fixes, and regression testing
+
+---
+
 **OPPO** | Voice Algorithm Development Engineer  
 _Oct 2024 - Jan 2025_
 
@@ -53,6 +65,37 @@ _Oct 2024 - Jan 2025_
 ## 🚀 Projects
 
 ### 🤖 AI Agent & Application Development
+
+#### [solo-leveling](https://github.com/zjn20021020/solo-leveling)
+**Self-learning Skill and Memory plugin for OpenClaw**
+
+- Detects user corrections and conversation friction through lifecycle hooks
+- Distills reusable Skills with skip/new/revise decisions and injects relevant experience into future contexts
+- Uses atomic writes, an indexed registry, and session-level deduplication to limit memory pollution
+
+**Tech Stack**: `TypeScript` `OpenClaw Plugin SDK` `Skills` `Memory` `Context Engineering`
+
+---
+
+#### [Pi_based-knowledge-agent](https://github.com/zjn20021020/Pi_based-knowledge-agent)
+**Conversational academic RAG agent built on the Pi Agent harness**
+
+- Injects 15 custom tools for paper collection management, arXiv retrieval, PDF parsing, indexing, and search
+- Uses ReAct-style routing across multiple collections and returns section-aware evidence
+
+**Tech Stack**: `TypeScript` `Pi Agent` `Tool Use` `RAG` `Embedding` `SQLite`
+
+---
+
+#### [PaperAgent](https://github.com/zjn20021020/PaperAgent)
+**End-to-end academic workflow built with LangGraph**
+
+- Models planning, retrieval, experiment design, section writing, and review as a 14-node state graph
+- Uses conditional branches and two iterative loops for section-level and paper-level quality control
+
+**Tech Stack**: `Python` `LangGraph` `Multi-Agent` `Planning` `State Machine`
+
+---
 
 #### [ScholarLife-Agent](https://github.com/zjn20021020/ScholarLife-Agent)
 **Multi-scenario AI Assistant for Students & Researchers**
@@ -148,6 +191,9 @@ Emotion Analysis System Based on EEG Signals | Application No.: CN202311089224.X
 ## 🛠️ Tech Stack
 
 ![Python](https://img.shields.io/badge/Python-3776AB?style=flat&logo=python&logoColor=white)
+![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=flat&logo=typescript&logoColor=white)
+![Rust](https://img.shields.io/badge/Rust-000000?style=flat&logo=rust&logoColor=white)
+![Go](https://img.shields.io/badge/Go-00ADD8?style=flat&logo=go&logoColor=white)
 ![C](https://img.shields.io/badge/C-00599C?style=flat&logo=c&logoColor=white)
 ![C++](https://img.shields.io/badge/C++-00599C?style=flat&logo=cplusplus&logoColor=white)
 ![MATLAB](https://img.shields.io/badge/MATLAB-0076A8?style=flat&logo=mathworks&logoColor=white)
@@ -157,14 +203,14 @@ Emotion Analysis System Based on EEG Signals | Application No.: CN202311089224.X
 ![Linux](https://img.shields.io/badge/Linux-FCC624?style=flat&logo=linux&logoColor=black)
 ![Git](https://img.shields.io/badge/Git-F05032?style=flat&logo=git&logoColor=white)
 
-**Keywords**: `AI Agent` · `Embedded Systems` · `LLM Applications` · `STM32` · `FPGA` · `Computer Vision` · `MRI Sequence Development`
+**Keywords**: `Agent Harness` · `Agent Loop` · `Tool Use` · `Skills` · `MCP` · `Memory` · `Subagent` · `Multi-Agent` · `Context Engineering` · `LangGraph` · `RAG` · `WebSocket` · `Observability`
 
 ---
 
 ## 📫 Contact
 
 - 📧 Email: zhangjianing@mail.ustc.edu.cn
-- 💬 Open to discuss: AI Agent Development, Embedded Systems, LLM Applications
+- 💬 Open to discuss: Agent Harness, AI Agent, and LLM systems engineering
 
 ---
 
